@@ -257,7 +257,7 @@ export default function ProductsPage() {
                     <FaStar key={i} className="text-yellow-400 mx-1" />
                   ))}
                 </div>
-                <p className="italic mb-4">"{testimonial.comment}"</p>
+                <p className="italic mb-4">&quot;{testimonial.comment}&quot;</p>
                 <p className="font-semibold text-yellow-400">{testimonial.name}</p>
               </div>
             ))}
