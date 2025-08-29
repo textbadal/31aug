@@ -156,7 +156,7 @@ export default function Services() {
         {/* Additional info */}
         <div className="mt-16 bg-blue-50 rounded-2xl p-8 md:p-10">
           <div className="max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">What's Included in Every Service?</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">What&apos;s Included in Every Service?</h3>
             
             <div className="grid md:grid-cols-2 gap-6 text-left">
               <div className="flex items-start">
