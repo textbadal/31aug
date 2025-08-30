@@ -107,6 +107,52 @@ export default function ProductsPage() {
         }}
       />
 
+      <Script
+  id="faq-schema"
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "How do I get the downloads after purchase?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Once you click the 'Instant Download' button, you’ll be redirected to our Google Form link. Submit your details, and you’ll receive the files immediately."
+          }
+        },
+        {
+          "@type": "Question",
+          name: "Are the floor plans Vastu compliant?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes! Most of our plans are designed with Vastu principles in mind. You can also tweak them as needed."
+          }
+        },
+        {
+          "@type": "Question",
+          name: "Can I use these plans for commercial projects?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Our plans are mainly for personal use, but you can modify and adapt them for your projects with proper customization."
+          }
+        },
+        {
+          "@type": "Question",
+          name: "Do I need special software to open the files?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "The packs include PDF (openable on any device) and CAD drawings (which can be opened in AutoCAD or similar software)."
+          }
+        }
+      ]
+    }),
+  }}
+/>
+
+
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-yellow-50 via-white to-yellow-100 py-16 md:py-24 overflow-hidden">
         <div className="absolute top-0 left-0 w-72 h-72 bg-yellow-200 rounded-full -translate-x-1/2 -translate-y-1/2 opacity-50"></div>
@@ -228,6 +274,11 @@ export default function ProductsPage() {
         </div>
       </section>
 
+
+
+
+      
+
       {/* Bottom Fixed CTA for Mobile */}
       <div className="fixed bottom-4 left-0 w-full flex justify-center z-50 px-4 md:hidden">
         <a
@@ -260,6 +311,46 @@ export default function ProductsPage() {
                 <p className="italic mb-4">&quot;{testimonial.comment}&quot;</p>
                 <p className="font-semibold text-yellow-400">{testimonial.name}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+ <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+            Frequently Asked <span className="text-yellow-600">Questions</span>
+          </h2>
+
+          <div className="space-y-6">
+            {[
+              {
+                q: "How do I get the downloads after purchase?",
+                a: "Once you click the 'Instant Download' button, you’ll be redirected to our Google Form link. Submit your details, and you’ll receive the files immediately.",
+              },
+              {
+                q: "Are the floor plans Vastu compliant?",
+                a: "Yes! Most of our plans are designed with Vastu principles in mind. You can also tweak them as needed.",
+              },
+              {
+                q: "Can I use these plans for commercial projects?",
+                a: "Our plans are mainly for personal use, but you can modify and adapt them for your projects with proper customization.",
+              },
+              {
+                q: "Do I need special software to open the files?",
+                a: "The packs include PDF (openable on any device) and CAD drawings (which can be opened in AutoCAD or similar software).",
+              },
+            ].map((faq, index) => (
+              <details
+                key={index}
+                className="group bg-white border border-gray-200 rounded-xl p-5 shadow-md"
+              >
+                <summary className="flex justify-between items-center cursor-pointer font-semibold text-gray-900">
+                  {faq.q}
+                  <span className="ml-2 transition-transform group-open:rotate-180">▼</span>
+                </summary>
+                <p className="mt-3 text-gray-600">{faq.a}</p>
+              </details>
             ))}
           </div>
         </div>
