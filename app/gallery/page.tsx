@@ -41,7 +41,10 @@ export default function GalleryPage() {
     { src: "/images/gallery29.jpg", title: "Commercial Building", category: "Exterior" },
     { src: "/images/gallery30.jpg", title: "Commercial Building", category: "Exterior" },
     { src: "/images/gallery31.jpg", title: "Commercial Building", category: "Exterior" },
-    { src: "/images/gallery32.jpg", title: "Commercial Building", category: "Exterior" },
+    { src: "/images/gallery32.jpg", title: "Classic Design", category: "Exterior" },
+    { src: "/images/gallery33.jpg", title: "Classic Design", category: "Exterior" },
+    { src: "/images/gallery34.jpg", title: "Classic Design", category: "Exterior" },
+    { src: "/images/gallery35.jpg", title: "Classic Design", category: "Exterior" },
   ];
 
   const categories = ["All", "Residential", "Design", "Interior", "Exterior"];
